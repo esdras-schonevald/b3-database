@@ -13,7 +13,7 @@ Se você recebeu um convite em seu e-mail e agora faz parte da equipe de desenvo
       >*git clone https://github.com/esdras-schonevald/free-db3.git*
       
   2.  Entrar na pasta onde foi salvo o projeto
-      >*cd stock-radar*
+      >*cd free-db3*
       
   3.  Iniciar o git nesta pasta
       >*git init*
