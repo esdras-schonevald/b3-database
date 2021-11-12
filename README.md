@@ -62,3 +62,5 @@ Pronto vocẽ já está com o repositório configurado. Agora siga os próximos 
   12. E finalmente utilize este ultimo comando para enviar as suas alterações locais para o repositório no servidor (neste caso o github)
 
       >*git push -u origin dev*
+
+*
