@@ -1,0 +1,44 @@
+<?php
+
+include "SingleCurl.php";
+
+if (session_status() !== 2){
+    session_start();
+}
+
+if (empty($_SESSION["stock_list_current"])){
+    $_SESSION["stock_list_current"] =   0;
+}
+
+$info       =   filter_input(INPUT_POST, "info");
+$config     =   yaml_parse_file("config.yaml");
+$max        =   count($config["STOCK LIST"]);
+$current    =   $_SESSION["stock_list_current"];
+$percent    =   intval(($current/$max)*100);
+
+if (isset($info)) {
+    $rInfo   =   json_decode($info, 1);
+    $_SESSION["stock_list"][$rInfo["Papel"]]    =   $rInfo;
+    if ($current >= $max) {
+        file_put_contents($config["STOCK LIST FILE"], json_encode($_SESSION["stock_list"]));
+        $_SESSION["stock_list_current"] =   0;
+        $_SESSION["stock_list"]         =   [];
+        header("Content-Type: Application/JSON");
+        echo file_get_contents($config["STOCK LIST FILE"]);
+        exit;
+    }
+}
+
+$ticker     =   $config["STOCK LIST"][$_SESSION["stock_list_current"]++];
+$url        =   "{$config["STOCK PROVIDER REPOSITORY"]}?papel=$ticker";
+
+$curl = new SingleCurl($url);
+echo utf8_encode(
+    $curl->getResponse()
+);
+
+echo "<script>
+document.getElementById('file').value = $current;
+document.getElementById('file').max = $max;
+document.getElementById('lab_file').innerHTML = 'Downloading $percent%:';
+</script>";
