@@ -18,13 +18,16 @@ $percent    =   intval(($current/$max)*100);
 
 if (isset($info)) {
     $rInfo   =   json_decode($info, 1);
-    $_SESSION["stock_list"][$rInfo["Papel"]]    =   $rInfo;
+    if (isset($rInfo["Papel"]))
+        $_SESSION["stock_list"]["ativos"][$rInfo["Papel"]]    =   $rInfo;
+
     if ($current >= $max) {
+        $_SESSION["stock_list"]["atualizacao"] = date("r");
         file_put_contents($config["STOCK LIST FILE"], json_encode($_SESSION["stock_list"]));
         $_SESSION["stock_list_current"] =   0;
         $_SESSION["stock_list"]         =   [];
-        header("Content-Type: Application/JSON");
-        echo file_get_contents($config["STOCK LIST FILE"]);
+        header("Location: ./done.html");
+        //echo file_get_contents($config["STOCK LIST FILE"]);
         exit;
     }
 }
@@ -40,5 +43,11 @@ echo utf8_encode(
 echo "<script>
 document.getElementById('file').value = $current;
 document.getElementById('file').max = $max;
-document.getElementById('lab_file').innerHTML = 'Downloading $percent%:';
+document.getElementById('lab_file').innerHTML = 'Downloading $percent%<br><small>{$rInfo["Papel"]} - {$rInfo["Empresa"]}</small>';
 </script>";
+
+if ($percent == 100){
+    echo "<script>
+    document.getElementById('stocklist').style.display = 'inherit';
+    </script>";
+}
