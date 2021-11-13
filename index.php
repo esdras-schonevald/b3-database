@@ -1,7 +1,4 @@
 <?php
 
-echo "index";
-print("hello adiel esdras");
-
-
-phpinfo();
+include "vendor/autoload.php";
+include "mock.html";

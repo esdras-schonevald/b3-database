@@ -1,0 +1,4 @@
+.gitconfig
+.vscode
+composer.lock
+test/

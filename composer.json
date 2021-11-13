@@ -1,0 +1,7 @@
+{
+    "name": "esdras-schonevald/free-db3",
+    "description": "A free database system of B3 stocks",
+    "require": {
+        "php": ">=8.0"
+    }
+}
