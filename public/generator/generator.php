@@ -7,7 +7,7 @@ if (session_status() !== 2){
 }
 
 if (empty($_SESSION["stock_list_current"])){
-    $_SESSION["stock_list_current"] =   0;
+    $_SESSION["stock_list_current"] =   1000;
 }
 
 $info       =   filter_input(INPUT_POST, "info");
