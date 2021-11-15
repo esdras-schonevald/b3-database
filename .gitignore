@@ -2,8 +2,9 @@
 .gitconfig
 .vscode
 composer.lock
+*.yaml
 
 # Ignoring folders
 /tests/
-/public/generator/
+/db-generator/
 /vendor/
