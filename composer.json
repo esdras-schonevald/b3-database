@@ -13,6 +13,7 @@
     ],
     "description": "A free database system of B3 stocks",
     "require": {
-        "php": ">=8.0"
+        "php": ">=8.0",
+        "ext-yaml": "^2.2"
     }
 }

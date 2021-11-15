@@ -1,4 +1,4 @@
-# free-db3
+# B3 Database
 Um container colaborativo de bancos de dados de ativos da B3
 
 ## Como colaborar?
@@ -11,7 +11,7 @@ Se você recebeu um convite em seu e-mail e agora faz parte da equipe de desenvo
 
   1.  Fazer uma cópia do repositório para o seu ambiente local
 
-      >*git clone https://github.com/esdras-schonevald/free-db3.git*
+      >*git clone https://github.com/esdras-schonevald/b3-database.git*
 
   2.  Entrar na pasta onde foi salvo o projeto
 
@@ -39,7 +39,7 @@ Se você recebeu um convite em seu e-mail e agora faz parte da equipe de desenvo
 
   7.  Adicione este repositório aos seus locais remotos
 
-      >*git remote add origin https://github.com/esdras-schonevald/free-db3.git*
+      >*git remote add origin https://github.com/esdras-schonevald/b3-database.git*
 
 Pronto vocẽ já está com o repositório configurado. Agora siga os próximos passos a cada alteração que você for subir para o repositório:
 
@@ -62,5 +62,3 @@ Pronto vocẽ já está com o repositório configurado. Agora siga os próximos 
   12. E finalmente utilize este ultimo comando para enviar as suas alterações locais para o repositório no servidor (neste caso o github)
 
       >*git push -u origin dev*
-
-*

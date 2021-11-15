@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-dev',
-        'version' => 'dev-dev',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '7109f9d2a5e6869689b81517d83bc441002dfea7',
-        'name' => 'esdras-schonevald/free-db3',
+        'reference' => '3bdcb15dceda685ec5b488815ea1e3ece6e7cc1a',
+        'name' => 'b3/database',
         'dev' => true,
     ),
     'versions' => array(
-        'esdras-schonevald/free-db3' => array(
-            'pretty_version' => 'dev-dev',
-            'version' => 'dev-dev',
+        'b3/database' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '7109f9d2a5e6869689b81517d83bc441002dfea7',
+            'reference' => '3bdcb15dceda685ec5b488815ea1e3ece6e7cc1a',
             'dev_requirement' => false,
         ),
     ),
