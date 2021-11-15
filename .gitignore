@@ -1,0 +1,9 @@
+# Ignoring config files
+.gitconfig
+.vscode
+composer.lock
+
+# Ignoring folders
+/tests/
+/public/generator/
+/vendor/

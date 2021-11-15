@@ -1,6 +1,0 @@
-.gitconfig
-.vscode
-composer.lock
-test/
-public/generator
-public/generator/*.*
