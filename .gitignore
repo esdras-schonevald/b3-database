@@ -7,4 +7,6 @@ composer.lock
 # Ignoring folders
 /tests/
 /db-generator/
-/vendor/
+**/vendor/
+info.php
+phpinfo.php
